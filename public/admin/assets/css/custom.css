@@ -1,0 +1,4 @@
+body[data-sidebar-size=default] .brand .logo .logo-lg {
+    width: 100%;
+    max-width: 150px!important;
+}

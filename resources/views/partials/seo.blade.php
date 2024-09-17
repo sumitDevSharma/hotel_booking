@@ -23,3 +23,6 @@
 <meta property="og:url" content="{{ url()->current() }}">
 {{--<!-- Twitter Meta Tags -->--}}
 <meta name="twitter:card" content="summary_large_image">
+
+<link rel="shortcut icon" href="{{ asset($themeTrue . 'images/favicon.png')}}" type="image/x-icon">
+<link rel="icon" href="{{ asset($themeTrue . 'images/favicon.png')}}" type="image/x-icon">

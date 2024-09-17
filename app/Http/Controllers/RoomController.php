@@ -7,6 +7,15 @@ use Illuminate\Http\Request;
 
 class RoomController extends Controller
 {
+
+    public function __construct()
+    {
+        if(Auth::user()->role != 'admin') {
+            abort(403);
+        }
+    }
+
+
     /**
      * Display a listing of the resource.
      */

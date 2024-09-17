@@ -1,52 +1,180 @@
-<!-- about section -->
-@if(isset($templates['about-us'][0]) && $about_us = $templates['about-us'][0])
-    <section class="about-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div
-                        class="img-box"
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                        data-aos-anchor-placement="center-bottom">
-                        <img src="{{getFile(config('location.content.path').@$about_us->templateMedia()->image)}}"
-                             class="img-fluid rounded-circle" alt="..."/>
-                        <a class="play-vdo" href="{{@$about_us->templateMedia()->video_link}}" data-fancybox="video">
-                            <i class="fas fa-play"></i>
-                        </a>
-                    </div>
+<section class="rooms-section-one">
+        <div class="outer-container">
+            <div class="auto-container">
+                <div class="sec-title centered">
+                    <h2>Room &amp; Suites</h2>
+                    <div class="lower-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</div>
                 </div>
-                <div class="col-lg-6">
-                    <div
-                        class="text-box"
-                        data-aos="fade-left"
-                        data-aos-duration="1000"
-                        data-aos-anchor-placement="center-bottom">
-                        <div class="header-text mb-5">
-                            <h5>@lang(optional($about_us->description)->title)</h5>
-                            <h2>@lang(optional($about_us->description)->sub_title)</h2>
+            </div>
+
+            <div class="row clearfix">
+                <div class="column col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="room-block-one height-one wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image-layer" style="background-image: url({{ asset($themeTrue . 'images/gallery/1.jpg')}});"></div>
+                                <figure class="image"><img src="{{ asset($themeTrue . 'images/gallery/1.jpg')}}" alt="" title=""></figure>
+                            </div>
+                            <div class="cap-box">
+                                <div class="cap-inner">
+                                    <div class="price">From <span>$50.00</span></div>
+                                    <h5>Balcony Room</h5>
+                                </div>
+                            </div>
+                            <div class="hover-box">
+                                <div class="hover-inner">
+                                    <h4>Balcony Room</h4>
+                                    <div class="pricing clearfix">
+                                        <div class="price">From <span>$50.00</span></div>
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text">Excepteur sint occaecat cupidatat pro dent in sun in culpa qui officia deserunt mollit anim.</div>
+                                    <div class="link-box"><a href="room-single.html" class="theme-btn btn-style-one"><span class="btn-title">Check Availability</span></a></div>
+                                </div>
+                            </div>
                         </div>
-                        <p>
-                            @lang(optional($about_us->description)->short_description)
-                        </p>
-                        <ul>
-                            @if(isset($contentDetails['about-us']))
-                                @forelse ( $contentDetails['about-us'] as $key => $item )
-                                    <li>
-                                        <i class="fal fa-check"></i>
-                                        @lang(optional($item->description)->short_description)
-                                    </li>
-                                @empty
-                                @endforelse
-                            @endif
-                        </ul>
-                        <a href="{{@$about_us->templateMedia()->button_link}}">
-                            <button
-                                class="btn-custom mt-4">@lang(optional($about_us->description)->button_name)</button>
-                        </a>
+                    </div>
+                    <div class="room-block-one height-one wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image-layer" style="background-image: url({{ asset($themeTrue . 'images/gallery/2.jpg')}});"></div>
+                                <figure class="image"><img src="{{ asset($themeTrue . 'images/gallery/2.jpg')}}" alt="" title=""></figure>
+                            </div>
+                            <div class="cap-box">
+                                <div class="cap-inner">
+                                    <div class="price">From <span>$50.00</span></div>
+                                    <h5>Sea View Room</h5>
+                                </div>
+                            </div>
+                            <div class="hover-box">
+                                <div class="hover-inner">
+                                    <h4>Sea View Room</h4>
+                                    <div class="pricing clearfix">
+                                        <div class="price">From <span>$50.00</span></div>
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text">Excepteur sint occaecat cupidatat pro dent in sun in culpa qui officia deserunt mollit anim.</div>
+                                    <div class="link-box"><a href="room-single.html" class="theme-btn btn-style-one"><span class="btn-title">Check Availability</span></a></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="column col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="room-block-one height-two wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image-layer" style="background-image: url({{ asset($themeTrue . 'images/gallery/3.jpg')}});"></div>
+                                <figure class="image"><img src="{{ asset($themeTrue . 'images/gallery/3.jpg')}}" alt="" title=""></figure>
+                            </div>
+                            <div class="cap-box">
+                                <div class="cap-inner">
+                                    <div class="price">From <span>$50.00</span></div>
+                                    <h5>Superior Room</h5>
+                                </div>
+                            </div>
+                            <div class="hover-box">
+                                <div class="hover-inner">
+                                    <h4>Superior Room</h4>
+                                    <div class="pricing clearfix">
+                                        <div class="price">From <span>$50.00</span></div>
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text">Excepteur sint occaecat cupidatat pro dent in sun in culpa qui officia deserunt mollit anim.</div>
+                                    <div class="link-box"><a href="room-single.html" class="theme-btn btn-style-one"><span class="btn-title">Check Availability</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                    <div class="room-block-one height-one wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image-layer" style="background-image: url({{ asset($themeTrue . 'images/gallery/4.jpg')}});"></div>
+                                <figure class="image"><img src="{{ asset($themeTrue . 'images/gallery/4.jpg')}}" alt="" title=""></figure>
+                            </div>
+                            <div class="cap-box">
+                                <div class="cap-inner">
+                                    <div class="price">From <span>$50.00</span></div>
+                                    <h5>Deluxe Room</h5>
+                                </div>
+                            </div>
+                            <div class="hover-box">
+                                <div class="hover-inner">
+                                    <h4>Deluxe Room</h4>
+                                    <div class="pricing clearfix">
+                                        <div class="price">From <span>$50.00</span></div>
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text">Excepteur sint occaecat cupidatat pro dent in sun in culpa qui officia deserunt mollit anim.</div>
+                                    <div class="link-box"><a href="room-single.html" class="theme-btn btn-style-one"><span class="btn-title">Check Availability</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="room-block-one height-one wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <div class="image-layer" style="background-image: url({{ asset($themeTrue . 'images/gallery/5.jpg')}});"></div>
+                                <figure class="image"><img src="{{ asset($themeTrue . 'images/gallery/5.jpg')}}" alt="" title=""></figure>
+                            </div>
+                            <div class="cap-box">
+                                <div class="cap-inner">
+                                    <div class="price">From <span>$50.00</span></div>
+                                    <h5>Luxury Suite Room</h5>
+                                </div>
+                            </div>
+                            <div class="hover-box">
+                                <div class="hover-inner">
+                                    <h4>Luxury Suite Room</h4>
+                                    <div class="pricing clearfix">
+                                        <div class="price">From <span>$50.00</span></div>
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="text">Excepteur sint occaecat cupidatat pro dent in sun in culpa qui officia deserunt mollit anim.</div>
+                                    <div class="link-box"><a href="room-single.html" class="theme-btn btn-style-one"><span class="btn-title">Check Availability</span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
-@endif

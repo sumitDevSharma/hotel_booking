@@ -23,7 +23,7 @@
           <div class="other-links clearfix">
               <div class="info">
                   <ul class="clearfix">
-                      <li><a href="#"><span class="icon flaticon-padlock"></span><span
+                      <li><a href="{{route('login')}}"><span class="icon flaticon-padlock"></span><span
                                   class="txt">Login</span></a></li>
                       <li><a href="te:+502542163754"><span class="icon flaticon-smartphone-2"></span><span
                                   class="txt">+50 254 216 3754</span></a></li>
