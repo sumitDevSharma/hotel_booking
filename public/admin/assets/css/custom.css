@@ -1,4 +1,19 @@
-body[data-sidebar-size=default] .brand .logo .logo-lg {
+body[data-sidebar-size="default"] .brand .logo .logo-lg {
     width: 100%;
-    max-width: 150px!important;
+    max-width: 200px !important;
+}
+
+div#locationTable_filter {
+    float: inline-end;
+}
+div#locationTable_paginate {
+    float: inline-end;
+}
+
+div#hotelTable_filter {
+    float: inline-end;
+}
+
+div#hotelTable_paginate {
+    float: inline-end;
 }

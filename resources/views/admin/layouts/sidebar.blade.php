@@ -26,10 +26,10 @@
                             <div class="collapse " id="sidebarHotels">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="apps-chat.html">Add Hotels</a>
+                                        <a class="nav-link" href="{{route('hotels.create')}}">Add Hotels</a>
                                     </li><!--end nav-item--> 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="apps-contact-list.html">Manage Hotels</a>
+                                        <a class="nav-link" href="{{route('hotels.index')}}">Manage Hotels</a>
                                     </li><!--end nav-item--> 
                                                         
                                 </ul><!--end nav-->
@@ -43,10 +43,10 @@
                             <div class="collapse " id="sidebarRooms">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="apps-chat.html">Add Rooms</a>
+                                        <a class="nav-link" href="{{route('rooms.index')}}">Add Rooms</a>
                                     </li><!--end nav-item--> 
                                     <li class="nav-item">
-                                        <a class="nav-link" href="apps-contact-list.html">Manage Rooms</a>
+                                        <a class="nav-link" href="{{route('rooms.create')}}">Manage Rooms</a>
                                     </li><!--end nav-item--> 
                                                         
                                 </ul><!--end nav-->
@@ -66,11 +66,9 @@
                             </a>
                             <div class="collapse " id="sidebarElements">
                                 <ul class="nav flex-column">
+                                    
                                     <li class="nav-item">
-                                        <a class="nav-link" href="ui-alerts.html">Add Locations</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="ui-alerts.html">Manage Locations</a>
+                                        <a class="nav-link" href="{{route('admin.locations')}}">Manage Locations</a>
                                     </li>
                                 </ul><!--end nav-->
                             </div><!--end startbarElements-->

@@ -45,6 +45,7 @@
   <script src="{{ asset($themeTrue . 'js/appear.js')}}"></script>
   <script src="{{ asset($themeTrue . 'js/wow.js')}}"></script>
   <script src="{{ asset($themeTrue . 'js/custom-script.js')}}"></script>
+  
   @stack('extra-js')
 
 </body>

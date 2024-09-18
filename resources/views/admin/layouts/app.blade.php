@@ -23,6 +23,9 @@
     <link href="{{asset('admin/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('admin/assets/css/app.min.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('admin/assets/css/custom.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('admin/assets/css/uppy.min.css')}}" rel="stylesheet" type="text/css">
+
+    <script src="{{asset('global/js/jquery.min.js') }}"></script>
 
 </head>
 
@@ -35,10 +38,10 @@
     <div class="startbar d-print-none">
         <!--start brand-->
         <div class="brand">
-            <a href="index.html" class="logo">
+            <a href="{{route('admin.dashboard')}}" class="logo">
                 
                 <span class="">
-                    <img src="{{ asset($themeTrue . 'images/logo.png')}}" alt="logo-large" class="logo-lg logo-light">
+                    <img src="{{ asset($themeTrue . 'images/nav-logo.png')}}" alt="logo-large" class="logo-lg logo-light">
                     <img src="{{ asset($themeTrue . 'images/logo.png')}}" alt="logo-large" class="logo-lg logo-dark">
                 </span>
             </a>
@@ -104,7 +107,7 @@
             <!--end Rightbar-->
             <!--Start Footer-->
             
-           @include('admin.layouts.footer')
+           
 
             <!--end footer-->
         </div>
@@ -115,23 +118,25 @@
     <!-- Javascript  -->
     <!-- vendor js -->
     
-    <script src="{{asset('global/js/jquery.min.js') }}"></script>
+  
     <script src="{{asset('global/js/popper.min.js') }}"></script>
     @stack('js-lib')
     <script src="{{ asset('global/js/notiflix-aio-2.7.0.min.js')}}"></script>
-    <script src="{{ asset('admin/js/perfect-scrollbar.jquery.min.js')}}"></script>
+    <!-- <script src="{{ asset('admin/js/perfect-scrollbar.jquery.min.js')}}"></script> -->
     <script src="{{ asset('global/js/feather.min.js') }}"></script>
-    <script src="{{ asset('global/js/moment.min.js') }}"></script>
+    <!-- <script src="{{ asset('global/js/moment.min.js') }}"></script> -->
     <script src="{{ asset('global/js/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('admin/js/admin.js') }}"></script>
+    <script src="{{ asset('global/js/admin.js') }}"></script>
     <script src="{{asset('admin/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('admin/assets/libs/simplebar/simplebar.min.js')}}"></script>
     <script src="{{asset('admin/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
     <script src="{{asset('admin/assets/data/stock-prices.js')}}"></script>
     <script src="{{asset('admin/assets/libs/jsvectormap/js/jsvectormap.min.js')}}"></script>
     <script src="{{asset('admin/assets/libs/jsvectormap/maps/world.js')}}"></script>
-    <script src="{{asset('admin/assets/js/pages/index.init.js')}}"></script>
     <script src="{{asset('admin/assets/js/app.js')}}"></script>
+    <script src="{{asset('admin/assets/js/simple-datatables.js')}}"></script>
+    <script src="{{ asset('global/js/jquery.dataTables.min.js') }}"></script>
+    
     @stack('js')
     @stack('extra-script')
 

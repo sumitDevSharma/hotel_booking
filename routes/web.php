@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\RoomController;
-use App\Http\Controllers\{BookingController,HomeController,AdminController};
+use App\Http\Controllers\{BookingController,HomeController,AdminController,LocationController};
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -27,8 +27,19 @@ Route::middleware('auth')->group(function () {
 
 
 Route::resource('hotels', HotelController::class);
+Route::get('/hotels-ajax', [HotelController::class, 'getHotelsAjax'])->name('admin.hotels.ajax');
+Route::delete('hotels-image/{image}', [HotelController::class, 'deleteImage'])->name('hotels.image.delete');
+
 Route::resource('rooms', RoomController::class);
 Route::resource('bookings', BookingController::class);
+
+Route::get('admin/locations', [LocationController::class, 'index'])->name('admin.locations');
+Route::post('admin/locations/create', [LocationController::class, 'store'])->name('admin.locations.store');
+Route::put('admin/locations/{location}', [LocationController::class, 'update'])->name('admin.locations.update');    
+Route::delete('admin/locations/{location}', [LocationController::class, 'destroy'])->name('admin.locations.destroy');
+Route::get('/locations-ajax', [LocationController::class, 'getLocationsAjax'])->name('admin.locations.ajax');
+
+
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
 {
-    protected $fillable = ['name', 'type', 'latitude', 'longitude', 'parent_id'];
+    protected $fillable = ['name', 'description', 'status','parent_id'];
 
     // If you want to support hierarchical locations
     public function parent()
