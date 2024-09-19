@@ -46,6 +46,7 @@ jQuery(function ($) {
               }, 1000);
             }
           } else {
+
           }
           $(".modal").modal("hide");
           $(".datatable").DataTable().ajax.reload();

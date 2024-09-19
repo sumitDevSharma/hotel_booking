@@ -82,33 +82,67 @@
                 </form>
             </div>
         </div>
-        <div class="row clearfix">
-            <!--Text Column-->
-            <div class="text-column col-lg-6 col-md-12 col-sm-12">
-                <div class="inner">
-                    <div class="sec-title">
-                        <h2>Quality <br>Holidays With Us</h2>
-                    </div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-                    <div class="link-box">
-                        <a href="about.html" class="theme-btn btn-style-one"><span class="btn-title">Read
-                                More</span></a>
+        <div class="row justify-content-center">
+            @forelse($hotels as $hotel)
+                <div class="col-md-6 col-lg-4 col-xl-3 mb-3 mb-md-4 pb-1">
+                    <div class="card transition-3d-hover shadow-hover-2 tab-card h-100">
+                        <div class="position-relative">
+                            <a href="{{ route('home.hotel', $hotel->id) }}"
+                                class="d-block gradient-overlay-half-bg-gradient-v5">
+                                <img class="card-img-top" src="{{ asset($hotel->images->first()->image_path) }}"
+                                    alt="img">
+                            </a>
+                            <div class="position-absolute top-0 right-0 pt-3 pr-3">
+                                <button type="button" class="btn btn-sm btn-icon text-white rounded-circle"
+                                    data-toggle="tooltip" data-placement="top" title="{{ __('Save for later') }}"
+                                    data-original-title="Save for later">
+                                    <span class="flaticon-valentine-heart"></span>
+                                </button>
+                            </div>
+                            <div class="position-absolute bottom-0 left-0 right-0 pb-3">
+                                <div class="col">
+                                    <a href="{{ route('home.hotel', $hotel->id) }}" class="d-block">
+                                        <div class="d-flex align-items-center font-size-14 text-white">
+                                            <i class="icon flaticon-pin-1 mr-2 font-size-20"></i> <span
+                                                class="font-weight-bold">{{ $hotel->address }}</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body px-4 py-3">
+                            <div class="mb-2">
+                                <div
+                                    class="d-inline-flex align-items-center font-size-13 text-lh-1 text-primary letter-spacing-3">
+                                    <div class="green-lighter">
+                                        <small class="fas fa-star"></small>
+                                        <small class="fas fa-star"></small>
+                                        <small class="fas fa-star"></small>
+                                        <small class="fas fa-star"></small>
+                                        <small class="fas fa-star"></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="{{ route('home.hotel', $hotel->id) }}"
+                                class="card-title font-size-17 font-weight-medium text-dark">{{ $hotel->name }}</a>
+                            <div class="mt-2 mb-3">
+                                <span
+                                    class="badge badge-pill badge-primary py-1 px-2 font-size-14 border-radius-3 font-weight-normal">4.6/5</span>
+                                <span class="font-size-14 text-gray-1 ml-2">(166 reviews)</span>
+                            </div>
+                            <div class="mb-0">
+                                <span class="mr-1 font-size-14 text-gray-1">From</span>
+                                <span class="font-weight-bold">${{ $hotel->rooms->min('price_per_night') }}</span>
+                                <span class="font-size-14 text-gray-1"> / night</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!--Image Column-->
-            <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
-                    <div class="image-box">
-                        <span class="dotted-pattern dotted-pattern-2"></span>
-                        <figure class="image"><img src="{{ asset($themeTrue . 'images/resource/featured-image-0.jpg')}}" alt="" title="">
-                        </figure>
-                        <div class="cap"><span class="txt">25 <br>Years <br>of <br>Exp.</span></div>
-                    </div>
+            @empty
+                <div class="col-12">
+                    <div class="alert alert-danger">No hotels found</div>
                 </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </section>

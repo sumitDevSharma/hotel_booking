@@ -8,6 +8,8 @@ use App\Http\Controllers\{BookingController,HomeController,AdminController,Locat
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/hotel/{hotel}', [HomeController::class, 'hotel'])->name('home.hotel');
+
 
 // clear cache 
 Route::get('/clear-cache', function() {
@@ -31,7 +33,13 @@ Route::get('/hotels-ajax', [HotelController::class, 'getHotelsAjax'])->name('adm
 Route::delete('hotels-image/{image}', [HotelController::class, 'deleteImage'])->name('hotels.image.delete');
 
 Route::resource('rooms', RoomController::class);
+Route::get('/rooms-ajax', [RoomController::class, 'getRoomsAjax'])->name('admin.rooms.ajax');
+Route::delete('rooms-image/{image}', [RoomController::class, 'deleteImage'])->name('rooms.image.delete');
+
+
 Route::resource('bookings', BookingController::class);
+
+Route::resource('users', UserController::class);    
 
 Route::get('admin/locations', [LocationController::class, 'index'])->name('admin.locations');
 Route::post('admin/locations/create', [LocationController::class, 'store'])->name('admin.locations.store');

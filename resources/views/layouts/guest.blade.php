@@ -10,14 +10,14 @@
     @include('partials.seo')
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{ asset($themeTrue . 'images/favicon.png')}}" type="image/x-icon">
-    <link rel="icon" href="{{ asset($themeTrue . 'images/favicon.png')}}" type="image/x-icon">
-    <link rel="stylesheet" href="{{asset('admin/assets/libs/jsvectormap/css/jsvectormap.min.css')}}">
+    <link rel="shortcut icon" href="{{ asset($themeTrue . 'images/favicon.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset($themeTrue . 'images/favicon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ asset('admin/assets/libs/jsvectormap/css/jsvectormap.min.css') }}">
     <!-- App css -->
-    <link href="{{asset('admin/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('admin/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="{{asset('admin/assets/css/app.min.css')}}" rel="stylesheet" type="text/css">
-
+    <link href="{{ asset('admin/assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/assets/css/icons.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/assets/css/app.min.css') }}" rel="stylesheet" type="text/css">
+    <script src="{{ asset('global/js/jquery.min.js') }}"></script>
 
 </head>
 
@@ -31,5 +31,10 @@
 
 
 </body><!--end body-->
+
+<script src="{{ asset('global/js/notiflix-aio-2.7.0.min.js') }}"></script>
+<script src="{{ asset('global/js/feather.min.js') }}"></script>
+<script src="{{ asset('global/js/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('global/js/admin.js') }}"></script>
 
 </html>

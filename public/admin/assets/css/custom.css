@@ -3,9 +3,18 @@ body[data-sidebar-size="default"] .brand .logo .logo-lg {
     max-width: 200px !important;
 }
 
+.startbar .brand .logo-lg {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    margin-left: 4px;
+    width: 100%;
+    max-width: 200px !important;
+}
+
 div#locationTable_filter {
     float: inline-end;
 }
+
 div#locationTable_paginate {
     float: inline-end;
 }

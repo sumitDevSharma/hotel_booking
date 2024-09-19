@@ -151,7 +151,8 @@ class HotelController extends Controller
      */
     public function destroy(Hotel $hotel)
     {
-        //
+        $hotel->delete();
+        return response()->json(['status' => 200, 'message' => 'Hotel deleted successfully']);
     }
 
     
@@ -161,10 +162,10 @@ class HotelController extends Controller
         return DataTables::of($hotels)
             ->addColumn('action', function($hotels){
                 $actionBtn = '<div class="text-end">
-                    <a href="'.route('hotels.edit',$hotels->id).'" class="btn btn-sm  btn-primary editlocationbtn">
+                    <a href="'.route('hotels.edit',$hotels->id).'" class="btn btn-sm  btn-primary">
                        Edit
                     </a>
-                    <a href="javascript:void(0)" class="btn btn-sm btn-danger deletelocationbtn" data-id="' . $hotels->id . '">
+                    <a href="javascript:void(0)" class="btn btn-sm btn-danger deleteHotelbtn" data-id="' . $hotels->id . '">
                          Delete
                     </a>
                 </div>';
