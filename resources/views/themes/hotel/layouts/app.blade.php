@@ -59,24 +59,24 @@
     <script src="{{ asset($themeTrue . 'js/wow.js') }}"></script>
     <script src="{{ asset($themeTrue . 'js/custom-script.js') }}"></script>
     <!-- JS Implementing Plugins -->
-    <script src="{{ asset($themeTrue . 'js/hs.megamenu') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/jquery.validate.min') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/flatpickr.min') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/bootstrap-select.min') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/slick') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/dzsparallaxer') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.megamenu.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/flatpickr.min.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/bootstrap-select.min.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/slick.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/dzsparallaxer.js') }}"></script>
 
     <!-- JS MyTravel -->
-    <script src="{{ asset($themeTrue . 'js/hs.core') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/hs.header') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/hs.unfold') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/hs.validation') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/hs.show-animation') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/hs.range-datepicker') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/hs.selectpicker') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/hs.go-to') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/hs.slick-carousel') }}"></script>
-    <script src="{{ asset($themeTrue . 'js/hs.quantity-counter') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.core.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.header.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.unfold.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.validation.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.show-animation.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.range-datepicker.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.selectpicker.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.go-to.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.slick-carousel.js') }}"></script>
+    <script src="{{ asset($themeTrue . 'js/hs.quantity-counter.js') }}"></script>
 
     <!-- JS Plugins Init. -->
     <script>

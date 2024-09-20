@@ -9,6 +9,8 @@ use App\Http\Controllers\{BookingController,HomeController,AdminController,Locat
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/hotel/{hotel}', [HomeController::class, 'hotel'])->name('home.hotel');
+Route::get('/hotel/booking/{hotel}/{room}', [HomeController::class, 'booking'])->name('home.booking');
+
 
 
 // clear cache 

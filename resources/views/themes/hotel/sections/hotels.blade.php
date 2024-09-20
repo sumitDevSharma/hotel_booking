@@ -87,7 +87,7 @@
                 <div class="col-md-6 col-lg-4 col-xl-3 mb-3 mb-md-4 pb-1">
                     <div class="card transition-3d-hover shadow-hover-2 tab-card h-100">
                         <div class="position-relative">
-                            <a href="{{ route('home.hotel', $hotel->id) }}"
+                            <a href="{{ route('home.hotel', slug($hotel->name)) }}"
                                 class="d-block gradient-overlay-half-bg-gradient-v5">
                                 <img class="card-img-top" src="{{ asset($hotel->images->first()->image_path) }}"
                                     alt="img">
@@ -101,7 +101,7 @@
                             </div>
                             <div class="position-absolute bottom-0 left-0 right-0 pb-3">
                                 <div class="col">
-                                    <a href="{{ route('home.hotel', $hotel->id) }}" class="d-block">
+                                    <a href="{{ route('home.hotel', slug($hotel->name)) }}" class="d-block">
                                         <div class="d-flex align-items-center font-size-14 text-white">
                                             <i class="icon flaticon-pin-1 mr-2 font-size-20"></i> <span
                                                 class="font-weight-bold">{{ $hotel->address }}</span>
@@ -123,7 +123,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="{{ route('home.hotel', $hotel->id) }}"
+                            <a href="{{ route('home.hotel', slug($hotel->name)) }}"
                                 class="card-title font-size-17 font-weight-medium text-dark">{{ $hotel->name }}</a>
                             <div class="mt-2 mb-3">
                                 <span

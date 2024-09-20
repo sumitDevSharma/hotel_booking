@@ -81,8 +81,8 @@ class RoomController extends Controller
                 $rooms->images()->create(['image_path' => $imagePath]);
             }   
         }
-        //,'redirect_url' => route('rooms.index')
-        return response()->json(['status' => 200, 'message' => 'Room Added successfully']);
+        
+        return response()->json(['status' => 200, 'message' => 'Room Added successfully','redirect_url' => route('rooms.index')]);
     }
 
     /**

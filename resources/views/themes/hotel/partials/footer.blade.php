@@ -27,8 +27,6 @@
                                     <ul class="links">
                                         <li><a href="index.html">Home</a></li>
                                         <li><a href="rooms-grid.html">Our Rooms</a></li>
-                                        <li><a href="restaurant.html">Restaurant</a></li>
-                                        <li><a href="about.html">About Hotera</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                     </ul>
                                 </div>
@@ -37,11 +35,11 @@
                                         <h4>Contact</h4>
                                     </div>
                                     <ul class="info">
-                                        <li class="address">Flat 20, Reynolds Neck, North Helenaville, FV77 8WS
+                                        <li class="address">4752 Sector 70 Mohali, Punjab, India
                                         </li>
-                                        <li class="phone"><a href="tel:+2(305)587-3407">+2(305) 587-3407</a>
+                                        <li class="phone"><a href="tel:+2(305)587-3407">(+91) 7007959656</a>
                                         </li>
-                                        <li class="email"><a href="mailto:info@hotera.com">info@hotera.com</a>
+                                        <li class="email"><a href="mailto:info@hotera.com">info@hotelbooking.com </a>
                                         </li>
                                         <li class="social-links">
                                             <a href="#"><span class="fab fa-facebook-f"></span></a>

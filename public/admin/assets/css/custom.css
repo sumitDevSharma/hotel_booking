@@ -26,3 +26,7 @@ div#hotelTable_filter {
 div#hotelTable_paginate {
     float: inline-end;
 }
+
+img.card-img-top {
+    height: 200px;
+}
